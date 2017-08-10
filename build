@@ -5,4 +5,4 @@ if [ -z $version ]; then
   version=latest
 fi
 echo "Executando o comando: docker image build -t debian-jdk8:$version"
-docker image build -t debian-jdk8:$version .
+docker image build --network=host -t debian-jdk8:$version .
